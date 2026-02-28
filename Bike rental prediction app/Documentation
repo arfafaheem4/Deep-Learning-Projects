@@ -1,0 +1,163 @@
+🚲 Bike Rental Prediction using Machine Learning & ANN
+📌 Project Overview
+
+This project predicts the daily bike rental count using Machine Learning and Artificial Neural Networks (ANN).
+The goal is to analyze environmental and seasonal factors such as:
+Season
+Month
+Weekday
+Weather situation
+Temperature
+Humidity
+Windspeed
+and predict how many bikes will be rented on a given day.
+
+📊 Dataset
+The dataset used is the Bike Sharing Dataset (Daily version), which contains:
+
+Date information
+
+Weather conditions
+
+Seasonal indicators
+
+Temperature & humidity
+
+Daily bike rental count (cnt)
+
+The target variable for prediction is:
+
+cnt → Total bike rentals per day
+🛠️ Technologies Used
+
+Python
+
+NumPy
+
+Pandas
+
+Matplotlib / Seaborn
+
+Scikit-Learn
+
+TensorFlow / Keras
+
+Gradio (for deployment UI)
+
+🔍 Models Implemented
+
+The following models were trained and evaluated:
+
+Linear Regression
+
+Random Forest Regressor
+
+Artificial Neural Network (ANN)
+
+Hyperparameter tuning was performed using:
+
+Grid Search
+
+Bayesian Optimization
+
+📈 Evaluation Metrics
+
+The models were evaluated using:
+
+MAE (Mean Absolute Error)
+
+RMSE (Root Mean Squared Error)
+
+R² Score
+
+Example ANN Results:
+
+MAE: 519.99
+RMSE: 692.54
+R2 Score: 0.8598
+📖 Interpretation:
+
+MAE ≈ 520 → On average, prediction error is about 520 bikes.
+
+RMSE ≈ 692 → Larger errors are penalized more heavily.
+
+R² ≈ 0.86 → Model explains about 86% of variance in bike rentals.
+
+This indicates strong predictive performance.
+
+🧠 ANN Architecture
+
+Input Layer (based on encoded features)
+
+Hidden Layers with optimized neurons
+
+Dropout for regularization
+
+ReLU activation
+
+Adam optimizer
+
+EarlyStopping (monitor='val_loss')
+
+Best hyperparameters (Bayesian Optimization):
+
+Neurons: 64
+Learning Rate: 0.0086
+Dropout: 0.10
+Batch Size: 64
+Best Validation Loss: 633519.375
+🚀 Deployment
+
+The model is deployed using Gradio, which allows users to:
+
+Input season
+
+Month
+
+Weekday
+
+Weather condition
+
+Temperature
+
+Humidity
+
+Windspeed
+
+and instantly receive a predicted bike rental count.
+
+To launch the app:
+
+python app.py
+📂 Project Structure
+├── data/
+├── notebook.ipynb
+├── model_training.py
+├── app.py
+├── README.md
+🎯 Key Learnings
+
+Importance of feature encoding (One-hot encoding)
+
+Effect of hyperparameter tuning on ANN performance
+
+Difference between MAE, RMSE, and R²
+
+Neural networks can extrapolate beyond training range
+
+Importance of scaling before ANN training
+
+📌 Future Improvements
+
+Add Gradient Boosting (XGBoost / LightGBM)
+
+Add model comparison visualization
+
+Deploy on HuggingFace Spaces or Streamlit Cloud
+
+Add prediction confidence intervals
+
+👩‍💻 Author
+
+Arfa
+BS Artificial Intelligence Student
